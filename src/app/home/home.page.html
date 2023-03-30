@@ -1,18 +1,18 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-title>
       Lista
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" color="dark">
   <div class="container">
     <ion-list class="list">
-      <ion-list-header class="list-header">
+      <ion-list-header class="list-header" color="dark">
         <ion-label>Contatos</ion-label>
       </ion-list-header>
-      <ion-item class="item" *ngFor="let contact of list" routerLink="">
+      <ion-item class="item" *ngFor="let contact of list" (click)="navigatePage()" color="primary">
         <ion-avatar>
           <img [src]="contact.img" />
         </ion-avatar>

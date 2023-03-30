@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { Contacts } from './../model/model';
@@ -23,5 +24,10 @@ export class HomePage {
     { img: this.assets + '5.jpeg', name: 'Lucas Vieira', email: 'lucas@gmail.com', id: 5 },
   ]
 
-  constructor() {}
+  constructor( private router: Router ) {}
+
+  navigatePage() {
+    this.router.navigate(['/contact']);
+  }
+
 }
