@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { Contacts } from './../model/model';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-home',
@@ -24,10 +25,32 @@ export class HomePage {
     { id: 5, img: this.assets + '5.jpeg', name: 'Lucas Vieira', email: 'lucas@gmail.com' },
   ]
 
-  constructor( private router: Router ) {}
+  public results = [...this.list];
+  public ordered = [];
+
+  constructor(
+    private router: Router,
+    private dataService: DataService
+  ) {}
 
   navigatePage() {
     this.router.navigate(['/contact']);
+  }
+
+  showInfoModal(contact: Contacts) {
+    this.dataService.setData('contact', contact);
+    this.router.navigateByUrl('/contact');
+  }
+
+  resortList() {
+    const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    this.ordered.forEach((letter: string) => {
+
+    })
+  }
+
+  ngOnInit(): void {
+    this.resortList();
   }
 
 }

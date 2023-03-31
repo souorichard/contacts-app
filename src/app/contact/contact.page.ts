@@ -1,8 +1,11 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { IonicModule } from '@ionic/angular';
+
+import { Contacts } from '../model/model';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-contact',
@@ -13,11 +16,23 @@ import { Router } from '@angular/router';
 })
 export class ContactPage {
 
+  contact?: Contacts;
 
-  constructor( private router: Router) { }
+  constructor(
+    private router: Router,
+    private dataService: DataService
+  ) { }
+
+  goToRoute(route: string) {
+    this.router.navigate([`../${route}`]);
+  }
+
+  ngAfterContentChecked() {
+    this.contact = this.dataService.getData('contact');
+  }
 
   navigatePage() {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/home'])
   }
 
 }
