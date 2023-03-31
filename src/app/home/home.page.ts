@@ -17,11 +17,11 @@ export class HomePage {
   assets = 'assets/img';
 
   list: Contacts[] = [
-    { img: this.assets + '1.jpeg', name: 'Caroline Souza', email: 'carol@gmail.com', id: 1 },
-    { img: this.assets + '2.jpeg', name: 'Aghata Domeni', email: 'aghata@gmail.com', id: 2 },
-    { img: this.assets + '3.jpeg', name: 'Yuri Onorio', email: 'yuri@gmail.com', id: 3 },
-    { img: this.assets + '4.jpeg', name: 'João Bispo', email: 'joao@gmail.com', id: 4 },
-    { img: this.assets + '5.jpeg', name: 'Lucas Vieira', email: 'lucas@gmail.com', id: 5 },
+    { id: 1, img: this.assets + '1.jpeg', name: 'Caroline Souza', email: 'carol@gmail.com' },
+    { id: 2, img: this.assets + '2.jpeg', name: 'Aghata Domeni', email: 'aghata@gmail.com' },
+    { id: 3, img: this.assets + '3.jpeg', name: 'Yuri Onorio', email: 'yuri@gmail.com' },
+    { id: 4, img: this.assets + '4.jpeg', name: 'João Bispo', email: 'joao@gmail.com' },
+    { id: 5, img: this.assets + '5.jpeg', name: 'Lucas Vieira', email: 'lucas@gmail.com' },
   ]
 
   constructor( private router: Router ) {}

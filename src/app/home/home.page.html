@@ -12,7 +12,7 @@
       <ion-list-header class="list-header" color="dark">
         <ion-label>Contatos</ion-label>
       </ion-list-header>
-      <ion-item class="item" *ngFor="let contact of list" (click)="navigatePage()" color="primary">
+      <ion-item class="item" *ngFor="let contact of list" (click)="navigatePage()" color="medium">
         <ion-avatar>
           <img [src]="contact.img" />
         </ion-avatar>
@@ -20,7 +20,7 @@
           <h4>{{ contact.name }}</h4>
           <p>{{ contact.email }}</p>
         </div>
-        <ion-label slot="end">{{ contact.id }}</ion-label>
+        <ion-icon slot="end" name="ellipsis-vertical-circle" color="primary"></ion-icon>
       </ion-item>
     </ion-list>
   </div>
