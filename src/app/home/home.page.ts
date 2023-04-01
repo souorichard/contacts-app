@@ -18,11 +18,11 @@ export class HomePage {
   assets = 'assets/img';
 
   list: Contacts[] = [
-    { id: 1, img: this.assets + '1.jpeg', name: 'Caroline Souza', email: 'carol@gmail.com' },
-    { id: 2, img: this.assets + '2.jpeg', name: 'Aghata Domeni', email: 'aghata@gmail.com' },
-    { id: 3, img: this.assets + '3.jpeg', name: 'Yuri Onorio', email: 'yuri@gmail.com' },
-    { id: 4, img: this.assets + '4.jpeg', name: 'João Bispo', email: 'joao@gmail.com' },
-    { id: 5, img: this.assets + '5.jpeg', name: 'Lucas Vieira', email: 'lucas@gmail.com' },
+    { id: 1, img: this.assets + '1.jpeg', name: 'Caroline Souza', email: 'carol@gmail.com', fone: '(14)99999-9999' },
+    { id: 2, img: this.assets + '2.jpeg', name: 'Aghata Domeni', email: 'aghata@gmail.com', fone: '(14)88888-8888' },
+    { id: 3, img: this.assets + '3.jpeg', name: 'Yuri Onorio', email: 'yuri@gmail.com', fone: '(14)77777-7777' },
+    { id: 4, img: this.assets + '4.jpeg', name: 'João Bispo', email: 'joao@gmail.com', fone: '(14)66666-6666' },
+    { id: 5, img: this.assets + '5.jpeg', name: 'Lucas Vieira', email: 'lucas@gmail.com', fone: '(14)555555-5555' },
   ]
 
   public results = [...this.list];

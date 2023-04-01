@@ -12,6 +12,32 @@
 <ion-content [fullscreen]="true" color="dark">
   <div class="container" *ngIf="contact">
     <img [src]="contact.img" alt="">
-    <h1>{{ contact.name }}</h1>
+    <h2>{{ contact.name }}</h2>
+    <div class="buttons">
+      <button class="btn">
+        <ion-icon name="chatbubbles"></ion-icon>
+        <span>mensagem</span>
+      </button>
+      <button class="btn">
+        <ion-icon name="call"></ion-icon>
+        <span>ligar</span>
+      </button>
+      <button class="btn">
+        <ion-icon name="videocam"></ion-icon>
+        <span>vídeo</span>
+      </button>
+    </div>
+    <div class="item">
+      <div class="line">
+        <p>Telefone</p>
+        <p>{{ contact.fone }}</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="line">
+        <p>Email</p>
+        <p>{{ contact.email }}</p>
+      </div>
+    </div>
   </div>
 </ion-content>

@@ -3,4 +3,5 @@ export interface Contacts {
   img: string;
   name: string;
   email: string;
+  fone: string;
 }
